@@ -1,18 +1,20 @@
-import { ContainerMovie } from "./styles";
+import { ContainerMovie, Movie } from "./styles";
 import { Star, Timer } from "phosphor-react";
+import MoviePicture from "../../styles/moviel.png"
 
 export function Content() {
     return(
         <ContainerMovie>
         <h1>categoria: </h1>
 
-        <div>
-            <p></p>
+        <Movie>
             <div>
-                <p><Star /> </p> 
-                <p><Timer /> </p>
-            </div>
-        </div>
+                <img src={MoviePicture} />
+                <h4>filme</h4>
+                <p><Star color="gold" /> 3 </p> 
+                <p><Timer color="gold" /> 10/10</p>
+            </div>            
+        </Movie>
 
         </ContainerMovie>
     )
