@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 *   {
@@ -16,4 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     body, input-security, textarea, button {
       font: 400 1rem Roboto, sans-serif;
 }
+`
+
+export const ContainerBody = styled.div`
+    display: flex;
 `

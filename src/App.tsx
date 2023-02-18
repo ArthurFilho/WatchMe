@@ -1,13 +1,17 @@
-import { Header } from "./Header";
-import { GlobalStyle } from "./styles/global";
+import { Content } from "./components/Content";
+import { SideBar } from "./components/SideBar/SideBar";
+import { ContainerBody, GlobalStyle } from "./styles/global";
+
+
 
 export function App() {
   return (
-    <>
-      <Header />
+    <ContainerBody>
+      <SideBar />
+      <Content />
 
       <GlobalStyle />
-    </>
+    </ContainerBody>
   )
 }
 
