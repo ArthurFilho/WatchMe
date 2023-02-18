@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 }
     body {
       -webkit-font-smoothing: antialised;
+      background-color: #0D0D0D;
 }
     body, input-security, textarea, button {
       font: 400 1rem Roboto, sans-serif;
