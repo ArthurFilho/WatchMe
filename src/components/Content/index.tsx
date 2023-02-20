@@ -8,12 +8,16 @@ export function Content() {
         <h1>categoria: </h1>
 
         <Movie>
-            <div>
+            <section>
                 <img src={MoviePicture} />
-                <h4>filme</h4>
-                <p><Star color="gold" /> 3 </p> 
-                <p><Timer color="gold" /> 10/10</p>
-            </div>            
+                <div>
+                    <h4>filme</h4>
+                    <ul>
+                        <li><Star color="gold" size={24} /> 10/10 </li>
+                        <li><Timer color="gold" size={24} /> 3min </li>
+                    </ul>
+                </div>
+            </section>            
         </Movie>
 
         </ContainerMovie>

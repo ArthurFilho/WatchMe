@@ -13,16 +13,33 @@ export const Movie = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-top: 100px;
-    div {
+    section {
         display: flex;
-        flex-direction: column;
         background-color: white;
         width: 200px;
         height: 250px;
         margin-right: 20px;
         color: black;
-        img {
+        div {
+            display: flex;
+            flex-direction: column;
             position: relative;
+            color: white;
+            ul {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                justify-content: space-around;
+            }
+            li {
+                display: flex;
+                gap: 3px;
+                list-style: none;
+                align-items: center;
+            }
+        }
+        img {
+            width: 100%;
         }
     }
 `
