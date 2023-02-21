@@ -6,6 +6,7 @@
 
 - [REACT]()
 - [TYPESCRIPT]()
+- [SASS]()
 
 <!-- <h1> <a href="https://todo-list-challenger.netlify.app/"> Clique aqui para ver o site em ação </a></h1> -->
 
