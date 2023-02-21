@@ -18,12 +18,13 @@ export const Movie = styled.div`
         display: flex;
         background-color: white;
         position: relative;
-        width: 200px;
+        width: 300px;
         height: 250px;
         margin-right: 20px;
         color: black;
         box-shadow:0 1px 2px 0 rgba(0,0,0,0.1);
         transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        margin-bottom: 30px;
         
         div {
             display: flex;
@@ -58,6 +59,6 @@ export const Movie = styled.div`
         }
     }
         section:hover{
-            transform:scale(1.15,1.15);
+            transform:scale(1.1,1.1);
             }
 `

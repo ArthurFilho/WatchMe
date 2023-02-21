@@ -17,7 +17,37 @@ export function Content() {
                         <li><Timer color="gold" size={24} /> 3min </li>
                     </ul>
                 </div>
-            </section>            
+            </section>       
+            <section>
+                <img src={MoviePicture} />
+                <div>
+                    <h4>filme</h4>
+                    <ul>
+                        <li><Star color="gold" size={24} /> 10/10 </li>
+                        <li><Timer color="gold" size={24} /> 3min </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <img src={MoviePicture} />
+                <div>
+                    <h4>filme</h4>
+                    <ul>
+                        <li><Star color="gold" size={24} /> 10/10 </li>
+                        <li><Timer color="gold" size={24} /> 3min </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <img src={MoviePicture} />
+                <div>
+                    <h4>filme</h4>
+                    <ul>
+                        <li><Star color="gold" size={24} /> 10/10 </li>
+                        <li><Timer color="gold" size={24} /> 3min </li>
+                    </ul>
+                </div>
+            </section>
         </Movie>
 
         </ContainerMovie>
