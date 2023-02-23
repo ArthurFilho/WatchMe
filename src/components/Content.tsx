@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ContextContents } from "../contexts/context";
 import { api } from "../services/api";
 import { MovieCard } from "./MovieCard"
 
@@ -14,6 +15,8 @@ interface MovieProps {
 }
 
 export function Content({ selectedGenreId, selectedGenre}: any) {
+
+  const { HandleGetId } = useContext(ContextContents)
 
   const [movies, setMovies] = useState<MovieProps[]>([]);
 
@@ -32,7 +35,14 @@ export function Content({ selectedGenreId, selectedGenre}: any) {
         <main>
           <div className="movies-list">
             {movies.map((movie: any) => (
-              <MovieCard key ={movie.imdbID} title={movie.Title} poster={movie.Poster} runtime={movie.Runtime} rating={movie.Ratings[0].Value} />
+              <button onClick={() => {HandleGetId(movie.imdbID)}}>
+                <MovieCard 
+                  key={movie.imdbID} 
+                  title={movie.Title} 
+                  poster={movie.Poster} 
+                  runtime={movie.Runtime} 
+                  rating={movie.Ratings[0].Value} />
+              </button>
             ))}
           </div>
         </main>
