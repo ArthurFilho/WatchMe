@@ -1,5 +1,7 @@
 .movie-card {
   position: relative;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
 
   img {
     width: 14.31rem;
@@ -56,4 +58,8 @@
       }
     }
   }
+}
+
+.movie-card:hover {
+    transform:scale(1.1,1.1);
 }

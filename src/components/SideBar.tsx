@@ -1,4 +1,4 @@
-import { GenreResponseProps } from "../App";
+import { GenreResponseProps } from "../SearchMovies";
 import { api } from "../services/api";
 import { Button } from "./Button";
 import { useState, useEffect } from "react"
