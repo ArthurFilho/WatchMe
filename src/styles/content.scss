@@ -29,5 +29,10 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4.75rem;
     list-style: none;
+
+    button {
+      padding: 0;
+      background: var(--background);
+    }
   }
 }

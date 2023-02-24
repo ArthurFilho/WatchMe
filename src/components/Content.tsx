@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { ContextContents } from "../contexts/context";
 import { api } from "../services/api";
 import { MovieCard } from "./MovieCard"
@@ -36,12 +37,14 @@ export function Content({ selectedGenreId, selectedGenre}: any) {
           <div className="movies-list">
             {movies.map((movie: any) => (
               <button onClick={() => {HandleGetId(movie.imdbID)}}>
+                <NavLink to="/moviesinfo">
                 <MovieCard 
                   key={movie.imdbID} 
                   title={movie.Title} 
                   poster={movie.Poster} 
                   runtime={movie.Runtime} 
                   rating={movie.Ratings[0].Value} />
+                  </NavLink>
               </button>
             ))}
           </div>
