@@ -33,7 +33,7 @@ export function ContextProvider({children}: any) {
     const [movieSelected, setMovieSelected] = useState<MovieProps[]>([])
     
     useEffect(()=> {
-      api.get<MovieProps[]>(`/movies/?imdbID=${idMovie}`).then(response => {
+      api.get<MovieProps[]>(`/movies/?imdbID=${idMovie}`).then((response:any) => {
         setMovieSelected(response.data)
       })
     }, [idMovie])
@@ -41,6 +41,8 @@ export function ContextProvider({children}: any) {
     function HandleGetId(props: any){
         setIdMovie(props)
     }
+
+    console.log(movieSelected)
 
     return(
         <ContextContents.Provider
