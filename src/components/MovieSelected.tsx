@@ -40,21 +40,34 @@ export function MovieSelected() {
             
                     <h1> {movie.Title}</h1>
 
-                    <p><strong>Description: </strong> {movie.Plot} </p>
+                    <div className="infos">
 
-                    <p><strong>Genre:</strong> {movie.Genre}</p>
+                    <div>
 
-                    <p><strong>Language:</strong> {movie.Language}</p>
+                        <p><strong>Language:</strong> {movie.Language} </p>
 
-                    <p><strong>Director:</strong> {movie.Director}</p>
+                        <p><strong>Genre:</strong> {movie.Genre}</p>
 
-                    <p><strong>Elenco:</strong> {movie.Actors} </p>
+                        <p><strong>Production:</strong> {movie.Production}</p>
 
-                    <p><strong>Released:</strong> {movie.Released}</p>
+                        <p><strong>Director:</strong> {movie.Director}</p>
 
-                    <p><strong>RunTime:</strong> {movie.Runtime}</p>
+                        <p><strong>Elenco:</strong> {movie.Actors} </p>
+                    </div>
 
-                    <p><strong>Ratings:</strong>{movie.Ratings[0].Value}</p>
+                    <div>
+                        
+
+                        <p><strong>Released:</strong> {movie.Released}</p>
+
+                        <p><strong>RunTime:</strong> {movie.Runtime}</p>
+
+                        <p><strong>Ratings:</strong>{movie.Ratings[0].Value}</p>
+                    </div>
+                    
+                    </div>
+
+                    
                     </>
                 )
             })}

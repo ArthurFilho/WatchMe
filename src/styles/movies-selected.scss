@@ -4,11 +4,18 @@
     justify-content: center;
     text-decoration: none;
     flex-direction: column;
+
+    .infos {
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+    }
         
     img {
       height: 300px;
       margin-bottom: 20px;
     }
+
     a {
         margin-top: 4.5rem;
         margin-bottom: 2.5rem;
@@ -16,11 +23,13 @@
         font-weight: 600;
         color: yellow;
         text-decoration: none;
+
         p {
           display: inline;
           color: white;
         }
       }
+
       p {
         margin-bottom: 10px;
       }
