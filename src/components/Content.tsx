@@ -36,10 +36,9 @@ export function Content({ selectedGenreId, selectedGenre}: any) {
         <main>
           <div className="movies-list">
             {movies.map((movie: any) => (
-              <button onClick={() => {HandleGetId(movie.imdbID)}}>
+              <button key={movie.imdbID} onClick={() => {HandleGetId(movie.imdbID)}}>
                 <NavLink to="/moviesinfo">
-                <MovieCard 
-                  key={movie.imdbID} 
+                <MovieCard  
                   title={movie.Title} 
                   poster={movie.Poster} 
                   runtime={movie.Runtime} 

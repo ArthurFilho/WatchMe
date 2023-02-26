@@ -22,6 +22,7 @@ interface ContextType {
       Value: string;
     }>;
     Runtime: string;
+    Plot: string;
   }
 
 export const ContextContents = createContext({} as ContextType)
@@ -33,16 +34,14 @@ export function ContextProvider({children}: any) {
     const [movieSelected, setMovieSelected] = useState<MovieProps[]>([])
     
     useEffect(()=> {
-      api.get<MovieProps[]>(`/movies/?imdbID=${idMovie}`).then((response:any) => {
-        setMovieSelected(response.data)
-      })
-    }, [idMovie])
+        api.get<MovieProps[]>(`/movies/?imdbID=${idMovie}`).then((response:any) => {
+          setMovieSelected(response.data)
+        })
+      }, [idMovie])
     
     function HandleGetId(props: any){
         setIdMovie(props)
     }
-
-    console.log(movieSelected)
 
     return(
         <ContextContents.Provider

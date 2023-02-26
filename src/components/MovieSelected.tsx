@@ -3,51 +3,62 @@ import { NavLink } from "react-router-dom"
 import { ContextContents } from "../contexts/context"
 import "../styles/movies-selected.scss"
 
+interface MovieProps {
+    imdbID: string;
+    Title: string;
+    Poster: string;
+    Year: string;
+    Released: string;
+    Genre: string;
+    Director: string;
+    Actors: string;
+    Language: string;
+    Production: string;
+    Ratings: Array<{
+      Source: string;
+      Value: string;
+    }>;
+    Runtime: string;
+    Plot: string;
+  }
+
 export function MovieSelected() {
 
     const { movieSelected } = useContext(ContextContents)
+
+    
 
     return(
         <div className="movies-selected">
             
             <NavLink to="/">Watch<p>Me</p> </NavLink>
 
-            <img src="https://m.media-amazon.com/images/M/MV5BMTk5NjkyNzEwOV5BMl5BanBnXkFtZTcwODc5NDI1MQ@@._V1_SX300.jpg" alt="" />
+            {movieSelected.map((movie:MovieProps)=> {
+                return(
+                    <>
+                    <img src={movie.Poster} alt="" />
             
-            <h1> Jubileu o filme</h1>
+                    <h1> {movie.Title}</h1>
 
-            <p>English, portuguese</p>
+                    <p><strong>Description: </strong> {movie.Plot} </p>
 
-            <p>Lançado em 2000</p>
+                    <p><strong>Genre:</strong> {movie.Genre}</p>
 
-            <p>Comedia</p>
+                    <p><strong>Language:</strong> {movie.Language}</p>
 
-            <p>tempo de filme</p>
+                    <p><strong>Director:</strong> {movie.Director}</p>
 
-            <p>Heberts Richard</p>
+                    <p><strong>Elenco:</strong> {movie.Actors} </p>
 
-            <p>Jim Carrey </p>
+                    <p><strong>Released:</strong> {movie.Released}</p>
 
-            <p>Avaliação</p>
+                    <p><strong>RunTime:</strong> {movie.Runtime}</p>
+
+                    <p><strong>Ratings:</strong>{movie.Ratings[0].Value}</p>
+                    </>
+                )
+            })}
 
         </div>
     )
 }
-
-// interface MovieProps {
-//     imdbID: string;
-//     Title: string;
-//     Poster: string;
-//     Year: string;
-//     Released: string;
-//     Genre: string;
-//     Director: string;
-//     Actors: string;
-//     Language: string;
-//     Production: string;
-//     Ratings: Array<{
-//       Source: string;
-//       Value: string;
-//     }>;
-//     Runtime: string;
-//   }
